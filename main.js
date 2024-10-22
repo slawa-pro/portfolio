@@ -79,7 +79,4 @@ async function sendEmailTelegram(event){
     console.error('Network error:', error);
   }
 
-
-
-
 }
