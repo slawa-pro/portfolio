@@ -55,6 +55,21 @@
           <a href="#" class="about-link">about me</a>
           <button class="header-btn">Offer me a job</button>
         </div>
+          <!-- modal window -->
+          <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2 class="title-modal">Let's work together</h2>
+              <p class="text-modal">To discuss your project, and work use the form below. I will contact you in the shortest time.</p>
+              
+              <form id="contactForm" class="form" onsubmit="sendEmailTelegram(event)">
+                <input type="text" name="email" placeholder="Telegram or Email address" required><br>
+                <textarea type="text" name="text" placeholder="What's your project and how can I help?" required></textarea><br>
+                <button type="submit" class="submit-btn">Contact me</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </header>
       <main class="main-wrapper">
         <div class="main-wrapper">
@@ -163,7 +178,6 @@
             <p class="help-text">
               Starting from your initial concept, I can take you through the stages of requirements gathering, solution design and software development, all the way to final delivery.
             </p>
-            <a href="mailto:va.povhleb@gmail.com" class="help-btn">Let's do this</a>
           </div>
           <div class="footer-action">
             
@@ -175,10 +189,10 @@
           <div class="footer-info">
             <div class="social-icons">
               <img >
-              <a href="#"><img src="./img/linkedin.png" alt="linkedin" class="icon linkedin"></img></a>
-              <a href="#"><img src="./img/github-sign.png" alt="github" class="icon github"></img></a>
-              <a href="#"><img src="./img/gmail.png" alt="gmail" class="icon gmail"></img></a>
-              <a href="#"><img src="./img/telegram.png" alt="telegram" class="icon telegram"></img></a>
+              <a href="https://www.linkedin.com/in/vyacheslav-povkhleb-b6459a283/"><img src="./img/linkedin.png" alt="linkedin" class="icon linkedin"></img></a>
+              <a href="https://github.com/slawa-pro"><img src="./img/github-sign.png" alt="github" class="icon github"></img></a>
+              <a href="mailto:va.povhleb@gmail.com"><img src="./img/gmail.png" alt="gmail" class="icon gmail"></img></a>
+              <a href="https://t.me/Vyacheslav_247"><img src="./img/telegram.png" alt="telegram" class="icon telegram"></img></a>
             </div>
             <p class="footer-credit">Handcrafted by me ©2024</p>
           </div>
