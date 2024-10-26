@@ -17,89 +17,6 @@ body {
   overflow-y: scroll;
 }
 
-/* loader */
-.loader-wrapper {
-  display: flex;
-  justify-content: center;
-  display: none;
-}
-
-.loader-container {
-  margin: 0;
-  padding: 0;
-  font-family: ‘Arial Narrow’, sans-serif;
-  font-weight: 400;
-  font-size: 3em;
-  color: #146c6c;
-}
-
-.loader {
-  position: relative;
-  top: 0.63em;  
-  display: inline-block;
-  text-transform: uppercase;  
-  opacity: 0;
-  transform: rotateX(-90deg);
-}
-
-.loader1 {
-  animation: drop 1.2s ease-in-out infinite;
-  animation-delay: 1.0s;
-}
-
-.loader2 {
-  animation: drop 1.2s ease-in-out infinite;
-  animation-delay: 1.1s;
-}
-
-.loader3 {
-  animation: drop 1.2s ease-in-out infinite;
-  animation-delay: 1.2s;
-}
-
-.loader4 {
-  animation: drop 1.2s ease-in-out infinite;
-  animation-delay: 1.3s;
-
-}
-
-.loader5 {
-  animation: drop 1.2s ease-in-out infinite;
-  animation-delay: 1.4s;
-}
-
-.loader6 {
-  animation: drop 1.2s ease-in-out infinite;
-  animation-delay: 1.5s;
-}
-
-.loader7 {
-  animation: drop 1.2s ease-in-out infinite;
-  animation-delay: 1.6s;
-}
-
-@keyframes drop {
-    10% {
-        opacity: 0.5;
-    }
-    20% {
-        opacity: 1;
-        top: 3.78em;
-        transform: rotateX(-360deg);
-    }
-    80% {
-        opacity: 1;
-        top: 3.78em;
-        transform: rotateX(-360deg);
-    }
-    90% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 0;
-        top: 6.94em;
-    }
-}
 /* header */
 .header-container {
   display: flex;
@@ -181,16 +98,16 @@ body {
   text-align: center;
 }
 
-
 form input, form textarea {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
   width: 100%;
   margin: 10px 0;
-  padding-top: 1em;
+  padding-top: 0.5em;
   border: 1px solid #ccc;
   border-radius: 5px;
   color: #333; 
   margin-bottom: 1.2em;
-  font-size: 1.1em;
   background-color: #f9f9f9;
   transition: border 0.3s, box-shadow 0.3s;
 }
@@ -205,12 +122,6 @@ input[type="email"] {
   border-color: #2c87f7;
 }
 
-form textarea {
-  height: 5em;
-  resize: vertical;
-  font-size: 1.1em;
-  border-color: #ccc;
-}
 
 ::placeholder {
   color: #999;
@@ -340,7 +251,7 @@ form textarea {
   font-family: 'Helvetica';
   background-color: #f9f9f9;
   padding-bottom: 3em;
-  padding-top: 3em;
+  padding-top: 1em;
 }
 
 .about-me-title {
@@ -349,6 +260,7 @@ form textarea {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1em;
+  margin-top: 1em;
   font-weight: 800;
 }
 
@@ -532,8 +444,7 @@ form textarea {
 
 
 .footer {
-  padding: 3rem;
-  text-align: center;
+  padding: 1rem;
 }
 
 .footer-title {
@@ -586,6 +497,16 @@ form textarea {
 
 .footer-credit:hover {
   color: white;
+}
+
+.footer-rs {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.rs-school {
+  color: #000000;
 }
 
 

@@ -1,8 +1,3 @@
-// close loader
-//window.close = function() {
-  //document.querySelector('.loader-wrapper').style.display = 'none';
-//};
-
 // burger
 const burgerMenu = document.getElementById('burgerMenu');
 const mobileBurgerMenu = document.getElementById('mobileBurgerMenu');
@@ -32,27 +27,25 @@ window.onclick = function(event) {
 };
 
 //form
-const botToken = 'AAG4Q8wq1dYY3jW0iXXne8AG-U0Wn_OfoZ0';
-const chatId = 'https://t.me/+kCEWC_3LhbAxYjAy'; 
+const botToken = '7839556640:AAG4Q8wq1dYY3jW0iXXne8AG-U0Wn_OfoZ0';
+const chatId = '-1002301878270';
 
 const telegramAPI = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
-
-async function sendEmailTelegram(event){
-  event.preventDefault(); //отменим перезагрузку (SPA)
+async function sendEmailTelegram(event) {
+  event.preventDefault(); // отменим перезагрузку (SPA)
 
   const form = event.target;
   const formBtn = document.querySelector('.submit-btn');
 
-  const { email, text } = Object.fromEntries(new FormData(form).entries());// превр. данные формы в массив
+  const { email, text } = Object.fromEntries(new FormData(form).entries()); // превращаем данные формы в массив
 
   console.log('Email:', email);
   console.log('Message:', text);
-  
 
-    const message = `
+  const message = `
     Новый запрос с сайта:
-    Обратный адрес: ${email}
+    Адрес: ${email}
     Сообщение: ${text}
   `;
 
@@ -64,8 +57,8 @@ async function sendEmailTelegram(event){
       },
       body: JSON.stringify({
         chat_id: chatId,
-        message: text
-      }) 
+        text: message 
+      })
     });
 
     if (response.ok) {
@@ -78,5 +71,4 @@ async function sendEmailTelegram(event){
   } catch (error) {
     console.error('Network error:', error);
   }
-
 }
